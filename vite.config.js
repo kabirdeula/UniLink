@@ -8,4 +8,5 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    requireConfigFile: false, //Disable Babel config file checking
 });
