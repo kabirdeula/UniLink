@@ -33,9 +33,9 @@ class Handler extends ExceptionHandler
         });
     }
 
-    protected function renderHttpExceptions(HttpException $e)
+    protected function renderHttpExceptions(HttpException $exception)
     {
-        return response()->view('errors.http', ['exception' => $e], $e->getStatusCode());
+        return response()->view('errors.http', ['exception' => $exception], $exception->getStatusCode());
     }
 
     protected function renderGenericErrorPage()
